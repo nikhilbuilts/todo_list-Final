@@ -47,12 +47,12 @@ export const Todo = () => {
   }, [todoList]);
 
   return (
-    <div className="bg-white place-self-center w-11/12 max-w-md flex flex-col p-7 min-h-[550px] rounded-xl">
+    <div className="bg-white place-self-center w-9/12 sm:w-11/12 max-w-md flex flex-col p-7 min-h-[550px] rounded-xl">
       {/* ---------Title-------------- */}
 
       <div className="flex items-center gap-2 mt-7">
         <img className="h-10" src={todo_icon} alt="" />
-        <h1 className="text-3xl font-semibold">To-Do List</h1>
+        <h1 className="text-xl md:text-3xl font-semibold">To-Do List</h1>
       </div>
 
       {/* ---------input-------------- */}
@@ -60,13 +60,13 @@ export const Todo = () => {
       <div className="flex items-center my-7 bg-gray-200 rounded-full">
         <input
           ref={inputRef}
-          className="bg-transparent border-0 outline-none flex-1 h-14 pl-6 pr-2 placeholder:text-slate-600"
+          className="bg-transparent border-0 outline-none flex-1 h-10 sm:h-14 pl-6 pr-2 placeholder:text-slate-600 w-10 sm:w20"
           type="text"
           placeholder="Enter the task"
         />
         <button
           onClick={add}
-          className="border-none rounded-full bg-orange-600 w-32 h-14 text-white text-md font-medium cursor-pointer"
+          className="border-none rounded-full bg-orange-600 w-20 sm:w-32 h-10 sm:h-14 text-white text-md font-medium cursor-pointer"
         >
           ADD +
         </button>
